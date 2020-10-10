@@ -18,6 +18,29 @@ module.exports = appInfo => {
   // add your middleware config here
   config.middleware = [];
 
+  // MySQL
+  config.mysql = {
+    clients: {
+      // clientId, 获取client实例，需要通过 app.mysql.get('clientId') 获取
+      db1: {
+        host: 'pim.kim',
+        port: '3306',
+        user: 'root',
+        password: 'Mm....850804',
+        database: 'pub_grm',
+        timezone: '08:00',  // 时间格式
+      },
+    },
+    // 所有数据库配置的默认值
+    default: {
+  
+    },
+    // 是否加载到 app 上，默认开启
+    app: true,
+    // 是否加载到 agent 上，默认关闭
+    agent: false,
+  };
+
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
